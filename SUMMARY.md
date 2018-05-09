@@ -9,13 +9,15 @@
   * [基本概念](ch02/concept.md)
   * [環境架構與設定說明](ch02/configuration.md)
 
-## 共用工具元件
+## 資料操作
 
 * [資料查詢](ch03/index.md)
   
 * [資料異動](ch04/index.md)
 
 * [O-R Mapping](ch05/index.md)
+
+## 進階使用
 
 * [交易](ch06/index.md)
 
