@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
 
@@ -7,7 +7,7 @@
 * [前言](shi-yong-shuo-ming/qian-yan/README.md)
   * 系統需求
   * 功能特色
-* [使用說明](shi-yong-shuo-ming/qian-yan/shi-yong-shuo-ming.md)
+* [使用說明](shi-yong-shuo-ming/shi-yong-shuo-ming/README.md)
   * 基本概念
   * 環境架構與設定說明
 
