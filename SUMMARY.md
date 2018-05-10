@@ -14,7 +14,7 @@
 ## 資料操作
 
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
-* [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
+* 資料異動
 * O-R Mapping
 
 ## 進階使用
