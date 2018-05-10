@@ -14,7 +14,7 @@
 ## 資料操作
 
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
-* 資料異動
+* [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
 * O-R Mapping
 
 ## 進階使用
@@ -22,4 +22,5 @@
 * 交易
 * 其它
   * 多重資料來源
+* Untitled
 
