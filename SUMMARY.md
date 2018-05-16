@@ -1,4 +1,4 @@
-# Table of contents
+# Summary
 
 * [Introduction](README.md)
 
@@ -8,8 +8,7 @@
   * 系統需求
   * [功能特色](shi-yong-shuo-ming/qian-yan/gong-neng-te-se.md)
 * [使用說明](shi-yong-shuo-ming/shi-yong-shuo-ming/README.md)
-
-  * 基本概念
+  * [基本概念](shi-yong-shuo-ming/shi-yong-shuo-ming/ji-ben-gai-nian.md)
   * 環境架構與設定說明
 
 ## 資料操作
@@ -24,6 +23,4 @@
 * 其它
   * 多重資料來源
 * Untitled
-
-
 
