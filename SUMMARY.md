@@ -9,6 +9,16 @@
   * [功能特色](shi-yong-shuo-ming/qian-yan/gong-neng-te-se.md)
 * [使用說明](shi-yong-shuo-ming/shi-yong-shuo-ming/README.md)
   * 基本概念
+  * DBFacade
+  * PersistenceContext
+  * QueryParam
+  * QueryParams
+  * PageParams
+  * DBRowMap
+  * PagedList
+  * PageInfo
+  * WhereBuilder
+  
   * 環境架構與設定說明
 
 ## 資料操作
