@@ -5,9 +5,6 @@
 ## 使用說明
 
 * [前言](shi-yong-shuo-ming/qian-yan/README.md)
-  * 系統需求
-  * [功能特色](shi-yong-shuo-ming/qian-yan/gong-neng-te-se.md)
-* [使用說明](shi-yong-shuo-ming/shi-yong-shuo-ming/README.md)
   * [基本概念](shi-yong-shuo-ming/shi-yong-shuo-ming/ji-ben-gai-nian.md)
   * 環境架構與設定說明
 
