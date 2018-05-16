@@ -6,7 +6,7 @@
 
 * [前言](shi-yong-shuo-ming/qian-yan/README.md)
   * [基本概念](shi-yong-shuo-ming/shi-yong-shuo-ming/ji-ben-gai-nian.md)
-  * 環境架構與設定說明
+  * [環境架構與設定說明](shi-yong-shuo-ming/shi-yong-shuo-ming/huan-jing-jia-gou-yu-she-ding-shuo-ming.md)
 
 ## 資料操作
 
