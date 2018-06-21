@@ -12,7 +12,7 @@
 
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
-* O-R Mapping
+* [O-R Mapping](zi-liao-cao-zuo/o-r-mapping.md)
 
 ## 進階使用
 
