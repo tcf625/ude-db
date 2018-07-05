@@ -1,7 +1,7 @@
 # DBFacade (查詢)
 
 
-## 列表查詢 (NativeSQL as DBRowMap)
+## 多列查詢 (NativeSQL as DBRowMap)
 
 * 定義於 **SqlSelector** 介面。
 * 原則上查詢字串使用 NativeSQL ，除非選用支援 HQL/... 的底層實作。
@@ -29,7 +29,7 @@ public interface MapConverter<T> {
 }
 ```
 
-## 列表查詢 (含 OR Mapping)
+## 多列查詢 (含 OR Mapping)
 
 
 ### * 以 '物件類型' 做 OR-Mapping 查詢
@@ -57,7 +57,7 @@ public interface MapConverter<T> {
 
 
 
-## 查詢單一列資料
+## 單一列查詢
 
 ### 以主鍵為 criteria 查詢
 
