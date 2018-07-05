@@ -7,14 +7,10 @@
 * 在實務上，一般會用 QueryExecutor 組成查詢 SQL。
 
 
-* \[**SQL Select**\]
-* \[**MapConverter**\]
-* AbstractQueryExecutor2
-* 1
-* 1
-* 2
-* * TEST
-* SimpleQueryExecutor
+~~\[**SQL Select**\]~~
+~~\[**MapConverter**\]~~
+~~AbstractQueryExecutor2~~
+~~SimpleQueryExecutor~~
 
 
 
