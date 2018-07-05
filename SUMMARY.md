@@ -17,6 +17,7 @@
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
   * [DBFacade的查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacade.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
+  * DBFacade的異動操作函式
 
 ## 進階使用
 
