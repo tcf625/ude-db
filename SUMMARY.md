@@ -11,6 +11,7 @@
 ## 資料操作
 
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
+  * [DBFacade](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacade.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
 * [O-R Mapping](zi-liao-cao-zuo/o-r-mapping.md)
 
@@ -19,5 +20,5 @@
 * 交易
 * 其它
   * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
-* Untitled
+* [Untitled](jin-jie-shi-yong/untitled.md)
 
