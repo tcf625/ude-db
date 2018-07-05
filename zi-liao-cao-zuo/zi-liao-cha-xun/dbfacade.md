@@ -98,11 +98,14 @@ String queryColumnForString(String, QueryParams, int)
 
 ## 以 RowAction<T> 尋訪操作
 
+* 如果RowAction 的 T process(final DBRowMap map) 回傳NULL，則結果不會加入LIST中。
+* 適用於處理大量資料時機。
 
-
-
-
-
+``` java
+<T> PagedList<T>  queryWithAction(RowAction<T>, String)
+<T> PagedList<T>  queryWithAction(RowAction<T>, String, QueryParams)
+<T> PagedList<T>  queryWithAction(RowAction<T>, String, QueryParams, PageParams)
+```
 
 
 
