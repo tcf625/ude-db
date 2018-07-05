@@ -1,22 +1,22 @@
 # 基本概念
 
 
+## PersistenceContext
 
+對應實際資料來源，如 DataSource / SessionFactory，視選用底層而定。
+* 可取得原始 JDBC Connection。
+* 可取得 SqlSelector, SqlExecutor 等基本操作類別。
 
-## DBFacade
-
-UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
-* (見資料操作)
 
 ## DBFacadeFactory
 
 建立DBFacade 的工廠類別，一般以 Spring 自動注入此元件。
 
-## PersistenceContext
+## DBFacade
 
-對應實際資料來源，如 DataSource / SessionFactory，視選用底層而定。
-* 可取得 JDBC Connection。
-* 可取得 SqlSelector, SqlExecutor 等基本操作類別。
+UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
+
+* 詳見資料操作
 
 ## 其它
 
