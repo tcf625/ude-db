@@ -9,7 +9,7 @@
 ### * 回傳結果以 **DBRowMap** 表示
 
 * 每一筆資料列的回傳結果以 **DBRowMap** 表示。
-* \( PagedQueryResults extends PagedArrayList\<DBRowMap\> \)
+* \( PagedQueryResults extends PagedArrayList < DBRowMap\> \)
 
 ``` java
 PagedQueryResults queryForList(String)
