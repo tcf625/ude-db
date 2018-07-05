@@ -83,7 +83,7 @@ Optional<DBRowMap> queryRowForMap(String, QueryParams)
 Object queryColumn(String)
 Object queryColumn(String, QueryParams)
 Object queryColumn(String, QueryParams, int)
-// 自動嘗試 CAST
+// 自動嘗試 CAST，無法自動轉換時，回應 DB1104E("指定查詢資料類別有誤")
 default <T> T queryColumn(final Class<T> cls, final String queryString) {
 ```
 
