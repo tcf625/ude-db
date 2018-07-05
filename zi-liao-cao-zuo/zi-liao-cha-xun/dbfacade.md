@@ -6,7 +6,7 @@
 * 定義於 **SqlSelector** 介面。
 
 
-### * 回傳結果以 **DBRowMap** 表示
+### * 回傳結果以 DBRowMap 表示
 
 * 每一筆資料列的回傳結果以 **DBRowMap** 表示。
 * \( PagedQueryResults extends PagedArrayList < DBRowMap\> \)
@@ -23,6 +23,10 @@ PagedQueryResults queryForList(String, QueryParams, PageParams)
 <T> PagedList<T> queryForList(MapConverter<T>, String)
 <T> PagedList<T> queryForList(MapConverter<T>, String, QueryParams)
 <T> PagedList<T> queryForList(MapConverter<T>, String, QueryParams, PageParams)
+
+public interface MapConverter<T> {
+    T convert(DBRowMap map);
+}
 ```
 
 ## 列表查詢 (含 OR Mapping)
