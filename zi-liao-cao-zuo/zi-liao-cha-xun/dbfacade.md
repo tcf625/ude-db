@@ -57,6 +57,22 @@ public interface MapConverter<T> {
 
 
 
+## 查詢單一列資料
+
+### 以主鍵為 criteria 查詢
+
+```
+T queryForObject(Class<T>, T)
+```
+
+### 取得回傳的第一筆資料列。
+
+* 若無查詢結果，return Optional.empty()
+
+```
+Optional<DBRowMap> queryRowForMap(String)
+Optional<DBRowMap> queryRowForMap(String, QueryParams)
+```
 
 
 
