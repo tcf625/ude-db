@@ -14,25 +14,15 @@ UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 ## PersistenceContext
 
-## QueryParam & QueryParams 
+.
 
-(見資料查詢)
+## **其它**
 
-## PageParams 
-
-(見資料查詢)
-
-## DBRowMap 
-
-(見資料操作)
-
-## PagedList / PageInfo 
-
-(見資料操作)
-
-## WhereBuilder
-
-(見資料查詢)
+* QueryParam & QueryParams (見資料查詢)
+* PageParams (見資料查詢)
+* DBRowMap (見資料操作)
+* PagedList / PageInfo (見資料操作)
+* WhereBuilder (見資料查詢)
 
 
 
