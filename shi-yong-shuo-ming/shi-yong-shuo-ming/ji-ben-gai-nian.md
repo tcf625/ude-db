@@ -14,9 +14,11 @@ UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 ## PersistenceContext
 
-.
+對應實際資料來源，如 DataSource / SessionFactory，視選用底層而定。
+* 可取得 JDBC Connection。
+* 可取得 SqlSelector, SqlExecutor 等基本操作類別。
 
-## **其它**
+## 其它
 
 * QueryParam & QueryParams (見資料查詢)
 * PageParams (見資料查詢)
