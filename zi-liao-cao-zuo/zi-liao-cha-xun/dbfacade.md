@@ -4,15 +4,25 @@
 ## 列表查詢 (NativeSQL as DBRowMap)
 
 * 定義於 **SqlSelector** 介面。
+
+
+### * 回傳結果以 **DBRowMap** 表示
+
 * 每一筆資料列的回傳結果以 **DBRowMap** 表示。
+* \( PagedQueryResults extends PagedArrayList\<DBRowMap\> \)
 
 ``` java
-queryForList(MapConverter<T>, String)
-queryForList(MapConverter<T>, String, QueryParams)
-queryForList(MapConverter<T>, String, QueryParams, PageParams)
-queryForList(String)
-queryForList(String, QueryParams)
-queryForList(String, QueryParams, PageParams)
+PagedQueryResults queryForList(String)
+PagedQueryResults queryForList(String, QueryParams)
+PagedQueryResults queryForList(String, QueryParams, PageParams)
+```
+
+### * 自行定義資料轉換器
+
+``` java
+<T> PagedList<T> queryForList(MapConverter<T>, String)
+<T> PagedList<T> queryForList(MapConverter<T>, String, QueryParams)
+<T> PagedList<T> queryForList(MapConverter<T>, String, QueryParams, PageParams)
 ```
 
 ## 列表查詢 (含 OR Mapping)
