@@ -74,6 +74,26 @@ Optional<DBRowMap> queryRowForMap(String)
 Optional<DBRowMap> queryRowForMap(String, QueryParams)
 ```
 
+## 欄位(Column)查詢
+
+
+* 同 DbRowMap.getRawData() 結果
+
+``` java
+Object queryColumn(String)
+Object queryColumn(String, QueryParams)
+Object queryColumn(String, QueryParams, int)
+// 自動嘗試 CAST
+default <T> T queryColumn(final Class<T> cls, final String queryString) {
+```
+
+* 同 DbRowMap.get 結果
+
+``` java
+String queryColumnForString(String)
+String queryColumnForString(String, QueryParams)
+String queryColumnForString(String, QueryParams, int)
+```
 
 
 
