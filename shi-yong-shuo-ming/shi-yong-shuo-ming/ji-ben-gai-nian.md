@@ -25,13 +25,13 @@ UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 (見資料操作)
 
-## PagedList 
+## PagedList / PageInfo 
 
 (見資料操作)
 
-## PageInfo 
-
 ## WhereBuilder
+
+(見資料查詢)
 
 
 
