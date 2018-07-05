@@ -4,7 +4,7 @@
 ## 列表查詢 (NativeSQL as DBRowMap)
 
 * 定義於 **SqlSelector** 介面。
-
+* 原則上查詢字串使用 NativeSQL ，除非選用支援 HQL/... 的底層實作。
 
 ### * 回傳結果以 DBRowMap 表示
 
@@ -46,6 +46,21 @@ public interface MapConverter<T> {
 
 
 ### * 以 '查詢字串'、'查詢參數' 取得Query結果
+
+* 試著以 Class<T> cls 對應的 MapConverter，轉換每列結果為 T
+
+``` java
+<T> PagedList<T> queryForList(Class<T>, String)
+<T> PagedList<T> queryForList(Class<T>, String, QueryParams)
+<T> PagedList<T> queryForList(Class<T>, String, QueryParams, PageParams)
+```
+
+
+
+
+
+
+
 
 
 
