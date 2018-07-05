@@ -5,6 +5,10 @@
 
 ### * 以 '物件類型' 做 OR-Mapping 查詢
 
+Class<T> cls 決定查詢的 TABLE 對象。
+
+查詢
+
 ``` java
 <T> PagedList<T> queryForList(Class<T> cls) 
 <T> PagedList<T> queryForList(Class<T> cls, PageParams pageParams) 
