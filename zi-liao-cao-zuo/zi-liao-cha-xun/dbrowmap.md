@@ -14,6 +14,6 @@
   
   
 * lambda :
-``` java
-  Function<DBRowMap, String> joinFunction(String separator, List<String> keys);
-```
+  ``` java
+    Function<DBRowMap, String> joinFunction(String separator, List<String> keys);
+  ```
