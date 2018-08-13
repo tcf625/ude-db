@@ -10,7 +10,7 @@
 * 操作：
   * 取得資料文字格式用  get(Object)
   * 取得原始資料用 getRawData
-  * 欄位合併輸出：joinText(final String separator, final List<String> keys)
+  * 欄位合併輸出：joinText(String separator, List<String> keys)
   
   
 * lambda :
