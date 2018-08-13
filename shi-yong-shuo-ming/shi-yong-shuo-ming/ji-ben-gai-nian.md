@@ -1,6 +1,5 @@
 # 基本概念
 
-
 ## PersistenceContext
 
 對應實際資料來源，如 DataSource / SessionFactory，視選用底層而定。
