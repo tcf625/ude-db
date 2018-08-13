@@ -1,7 +1,6 @@
 # UDE 資料庫模組使用說明
 
 * [前言](README.md)
-* [前言](shi-yong-shuo-ming/qian-yan/README.md)
   * [基本概念](shi-yong-shuo-ming/shi-yong-shuo-ming/ji-ben-gai-nian.md)
   * [環境架構與設定說明](shi-yong-shuo-ming/shi-yong-shuo-ming/huan-jing-jia-gou-yu-she-ding-shuo-ming.md)
 
