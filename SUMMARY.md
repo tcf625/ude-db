@@ -1,12 +1,10 @@
-# Summary
-
-## UDE 資料庫模組使用說明
+# UDE 資料庫模組使用說明
 
 * [前言](shi-yong-shuo-ming/qian-yan/README.md)
   * [基本概念](shi-yong-shuo-ming/shi-yong-shuo-ming/ji-ben-gai-nian.md)
   * [環境架構與設定說明](shi-yong-shuo-ming/shi-yong-shuo-ming/huan-jing-jia-gou-yu-she-ding-shuo-ming.md)
 
-## 資料操作
+# 資料操作
 
 * [DBRowMap](zi-liao-cao-zuo/zi-liao-cha-xun/dbrowmap.md)
 * [O-R Mapping](zi-liao-cao-zuo/o-r-mapping.md)
@@ -16,7 +14,7 @@
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
   * [DBFacade的異動操作函式](zi-liao-cao-zuo/zi-liao-yi-dong/dbfacadede-yi-dong-cao-zuo-han-shi.md)
 
-## 進階使用
+# 進階使用
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
 * 其它
