@@ -1,4 +1,4 @@
-概念: 
+O-R Mapping 概念: 
 
 實作方式有二
 1. 底層選擇 Hibernate

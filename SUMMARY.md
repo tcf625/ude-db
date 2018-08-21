@@ -1,3 +1,5 @@
+# Summary
+
 ## UDE 資料庫模組使用說明
 
 * [前言](README.md)
@@ -17,7 +19,6 @@
 ## 進階使用
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
-* 其它
+* [其它](jin-jie-shi-yong/qi-ta.md)
   * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
-* [Untitled](jin-jie-shi-yong/untitled.md)
 
