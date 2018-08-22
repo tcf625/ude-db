@@ -45,7 +45,7 @@ public interface MapConverter<T> {
 * #### 以 '物件類型' 做 OR-Mapping 查詢
 
   * 由 Entity Class 類別 決定查詢的 TABLE 對象。
-  * 若有查詢條件，就使用 WhereBuilder 帶入。
+  * 若有查詢條件，就使用 WhereBuilder 帶入。請見次節說明。
 ``` java
 <T> PagedList<T> queryForList(Class<T> cls) 
 <T> PagedList<T> queryForList(Class<T> cls, PageParams pageParams) 
@@ -53,7 +53,6 @@ public interface MapConverter<T> {
 <T> PagedList<T> queryForList(Class<T> cls, StringWhereBuilder whereBuilder, PageParams pageParams);
 ```
 
-* ##### WhereBuilder
 
 
 
