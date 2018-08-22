@@ -28,6 +28,11 @@ if (StringUtils.isNotBlank(b)) {
   sql.append("and b=? ");
   params.add(b);
 }
+if (StringUtils.isNotBlank(b)) {
+  sql.append("and b=? ");
+  params.add(b);
+}
+
 
 
 
@@ -45,7 +50,7 @@ return doQuery( sql.toString(), params);
 
 
 
-
+11
 
 
 
