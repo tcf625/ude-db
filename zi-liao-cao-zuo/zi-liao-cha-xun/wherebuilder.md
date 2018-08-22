@@ -58,11 +58,50 @@ return executor.executeQuery(dbFacade);
 
 ### IWhereBuilder 
 
+泛型參數 T 是為了之後會介紹的另一個實作分支 EntityWhereBuilderWrapper 而設，表示如何傳入 COLUMN 定義
+。在一般用法下，T 應該是 String 型別，直接傳入 Column 名稱。
+
+
+#### 比對條件子句
+
+* 預設逐一加入的子句，在彼此之間，會使用 AND 連接。
+* 基本原則是如果傳入值為空白(isBlank，包含由空白字元組成的情況)，就不會加入對應子句。
+
 ``` java
-/**
- * @param <T> 如何傳入 COLUMN 定義
- */
- 
+betweenClause(String, T, SqlType, Object, Object)
+betweenClause(T, String, String)
+
+clause(String, T, OP, SqlType, Object)
+clause(T, OP, SqlType, Object)
+clause(T, OP, String)
+
+equalsClause(String, T, SqlType, Object)
+equalsClause(T, SqlType, Object)
+equalsClause(T, String)
+
+inClause(String, T, List<String>)
+inClause(String, T, QueryParams)
+inClause(T, List<String>)
+inClause(T, String[])
+
+likeClause(String, T, String)
+likeClause(T, String)
+
+notInClause(String, T, QueryParams)
+notNullClause(String, T)
+
+nullClause(String, T)
+nullClause(T)
+
+startWithClause(String, T, String)
+startWithClause(T, String)
+```
+
+
+####
+
+
+``` java
 addAndClauses(Consumer<IWhereBuilder<T>>)
 addNotClauses(Consumer<IWhereBuilder<T>>)
 addOrClauses(Consumer<IWhereBuilder<T>>)
