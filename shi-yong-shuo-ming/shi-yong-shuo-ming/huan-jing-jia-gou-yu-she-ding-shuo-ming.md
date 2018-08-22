@@ -23,5 +23,9 @@
   <dependency>
       <groupId>com.iisigroup</groupId><artifactId>iisi-ude-db-core</artifactId>
   </dependency>
+  <!-- 若用 hibernate 做為底層，就再加上(或改用) -->
+  <dependency>
+      <groupId>com.iisigroup</groupId><artifactId>iisi-ude-db-core-hibernate</artifactId>
+  </dependency>  
   ```
 
