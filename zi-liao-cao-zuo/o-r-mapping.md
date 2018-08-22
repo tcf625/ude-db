@@ -22,5 +22,20 @@ UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。
 * Type
 
 
+### DAO Finder
 
+DBFacadeJDBCConfiguration 中，有定義以下兩個 Bean
 
+``` java
+@Bean
+public JDBCDAOFactory jdbcDAOFactory() {
+    final JDBCDAOFactory jdbcDAOFactory = new JDBCDAOFactory();
+    jdbcDAOFactory.setDaoFinder(jdbcDAOFinder());
+    return jdbcDAOFactory;
+}
+
+@Bean
+public DAOFinder jdbcDAOFinder() {
+    return new JDBCDAOFinder();
+}
+```
