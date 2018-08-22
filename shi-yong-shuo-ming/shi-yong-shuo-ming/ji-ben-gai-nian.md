@@ -38,13 +38,14 @@ UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 ## 其它
 
-常見於各函式傳入、回傳的 JAVA 類別：
+常見於各函式傳入、回傳的 JAVA 類別，詳見資料查詢
 
-* 查詢參數：QueryParam & QueryParams (見資料查詢)
-* 查詢參數(分頁)：PageParams (見資料查詢)
-* DBRowMap (見資料操作)
-* PagedList / PageInfo (見資料操作)
-* WhereBuilder (見資料查詢)
+* 查詢參數：QueryParam & QueryParams
+* 查詢參數(分頁)：PageParams
+* 查詢條件：WhereBuilder
+* 查詢結果：DBRowMap
+* 查詢結果集合：PagedList / PageInfo
+
 
 
 
