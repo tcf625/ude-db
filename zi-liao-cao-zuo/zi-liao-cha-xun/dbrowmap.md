@@ -66,14 +66,32 @@ public class PageInfo implements Serializable {
   * QueryParams 實作 List < QueryParam \> 介面，是 QueryParam 的集合物件。
   * 在 ude-db 的多數函式，必要時，會以此類別做為傳入參數。
 
+  * 建立後，可使用它提供的函式，加入 QueryParam 物件。
+  
+``` java
+/**
+ * SQL TYPE 依傳入 Object 決定
+ * SqlType.NULL : value == null
+ * SqlType.CHAR : java.lang.String
+ * SqlType.NUMERIC : java.lang.Number
+ * SqlType.JAVA_OBJECT : 其它
+ */
+void addParam(Object)
+void addParam(SqlType, Object)
+void addStringParam(String) // SQL Type 為 CHAR
+void addRepeat(QueryParam, int times)   // 重複加入
+void addRepeatString(String, int times) // 重複加入
+
+```
+
 * #### 靜態建構式
  
   為簡化使用，QueryParams 提供靜態建構式如下：
  
 ``` java
-  static QueryParams from(Object...)
-  static QueryParams fromString(List<String>)
-  static QueryParams fromString(String...)
+  static QueryParams from(Object...) // SQL Type 同 addParam(Object value) 原則
+  static QueryParams fromString(List<String>) // SQL Type 為 CHAR
+  static QueryParams fromString(String...)    // SQL Type 為 CHAR
 ```
 
   
