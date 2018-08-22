@@ -33,7 +33,7 @@
 
 #### Hibernate
 
-先以 Hibernate 為例，Spring Context 應在宣告 SessionFactory 處，加入 DBFacadeHibernateConfiguration，以建立資料庫模組的必要元件 Bean，主要是
+先以 Hibernate 為例，Spring Context 應在宣告 SessionFactory 處，加入 DBFacadeHibernateConfiguration，以建立資料庫模組的必要元件 Bean，主要是：
 
 * PersistenceContext
 * DBFacadeFactory
