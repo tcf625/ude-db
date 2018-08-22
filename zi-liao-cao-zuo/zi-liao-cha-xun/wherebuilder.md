@@ -9,6 +9,19 @@ WhereBuilder 是目前 UDE-DB 提供的輔助類別中的一個重要結構。
 * 2017 下半 ~ 2018 上半年度(v2.1.0~)，基於此基礎上增加很多輔助類別與函式，如之後會提到的 SimpleQueryExecutor 等等，預計2018.12 的 v2.1.4 會把相關的單元測試及使用範例做較為完整的補充。
 
 
+### 用途
+
+WhereBuilder 的早期發展，是為了一種常見案例 : 
+
+這是在一些早期專案中，可能會看到的寫法
+
+``` java
+StringBuilder sql = new StringBuilder("select * from xxx where 1=1 ");
+
+
+ 
+
+```
 
 
 
