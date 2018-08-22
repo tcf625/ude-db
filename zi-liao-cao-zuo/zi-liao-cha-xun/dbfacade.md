@@ -46,7 +46,6 @@ public interface MapConverter<T> {
 
   * 由 Entity Class 類別 決定查詢的 TABLE 對象。
   * 若有查詢條件，就使用 WhereBuilder 帶入。
-
 ``` java
 <T> PagedList<T> queryForList(Class<T> cls) 
 <T> PagedList<T> queryForList(Class<T> cls, PageParams pageParams) 
