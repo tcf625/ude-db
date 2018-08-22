@@ -53,6 +53,7 @@ public interface MapConverter<T> {
 <T> PagedList<T> queryForList(Class<T> cls, StringWhereBuilder whereBuilder, PageParams pageParams);
 ```
 
+* ##### WhereBuilder
 
 
 
