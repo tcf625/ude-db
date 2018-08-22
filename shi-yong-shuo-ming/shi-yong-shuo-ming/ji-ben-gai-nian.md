@@ -12,7 +12,7 @@
 
 ### SqlExecutor
 
-提供 insert/update 函式執行 SQL 敘述，insert 函式可取得更多的回應結果，如insert時自動建立的鍵值。
+提供 insert/update 函式執行 SQL 敘述，使用 insert 函式可取得更多的回應結果，如insert時自動建立的鍵值。
 
 ``` java 
 InsertResult insert(String)
