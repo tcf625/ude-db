@@ -102,8 +102,13 @@ void addRepeatString(String, int times) // 重複加入
 進行分頁查詢時，也就是以每頁 N 筆，要求取得第 M 頁的資料列表時，所使用的參數類別。
 
 ``` java
-1
+private int pageSize = 10;
+private int pageNo   = 1;
+
+public static PageParams bySizeAndNumber(int size, int no);
 ```
+
+預設為查詢前 10 筆資料，若 pageSize <=0 則表示取回所有資料。
 
 * ### 靜態常數
 
