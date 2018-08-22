@@ -65,7 +65,6 @@ public class PageInfo implements Serializable {
  
   * QueryParams 實作 List < QueryParam \> 介面，是 QueryParam 的集合物件。
   * 在 ude-db 的多數函式，必要時，會以此類別做為傳入參數。
-
   * 建立後，可使用它提供的函式，加入 QueryParam 物件。
   
 ``` java
@@ -83,6 +82,9 @@ void addRepeat(QueryParam, int times)   // 重複加入
 void addRepeatString(String, int times) // 重複加入
 
 ```
+* #### QueryParams.EMPTY 
+
+  用於查詢沒有參數時的靜態常數。
 
 * #### 靜態建構式
  
