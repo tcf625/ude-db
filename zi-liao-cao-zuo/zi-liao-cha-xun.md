@@ -4,7 +4,7 @@
 
 * 可以搭配 WhereBuilder 使用指定查詢條件。
 
-* 在實務上，一般會用 QueryExecutor 組成查詢 SQL。
+* 在實務上，一般會使用 QueryExecutor 組成查詢 SQL。
 
 
 ~~\[**SQL Select**\]~~
