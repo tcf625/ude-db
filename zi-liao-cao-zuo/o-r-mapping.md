@@ -58,7 +58,21 @@ public DAOFinder jdbcDAOFinder() {
 }
 ```
 
-JDBCDAOFinder
+* ##### JDBCDAOFinder
+
+  預設的對應模式是  
+  * DaoClass Name : 把 EntityClass 的字尾去掉，再加上 DAOImpl。
+  * Dao package : 把 EntityClass 所在的 package 中的 entity 或 domain 代換為 dao，並在最末加上 .impl。
+  
+  可以用設定以下屬性以變動對應原則。
+  ``` java
+    protected String entityPackagePattern = "entity|domain";
+    protected String entityClassSuffix = "Entity";
+    protected String daoSuffix = "DAOImpl";
+    protected boolean daoInImplPackage = true;
+  ```
+  
+
 
 
 
