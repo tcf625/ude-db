@@ -45,7 +45,7 @@
 <bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
     <!-- SPRING-ORM -->
     <!-- 以下為測試範例內容，使用時應自行更改 -->    
-    <property name="dataSource" ref="testDataSource1" />
+    <property name="dataSource" ref="testDataSource" />
     <property name="packagesToScan" value="sample.ude.db.entity" />
     <property name="hibernateProperties">
         <props>
@@ -61,7 +61,7 @@
 
 ``` xml
 <bean class="com.iisigroup.ude.configuration.DBFacadeJDBCConfiguration">
-    <constructor-arg index="0" ref="testDataSource1" />
+    <constructor-arg index="0" ref="testDataSource" />
 </bean>
 ```
 
