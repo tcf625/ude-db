@@ -33,8 +33,12 @@ if (StringUtils.isNotBlank(c1) && StringUtils.isNotBlank(c2)) {
   params.add(c1);
   params.add(c2);  
 }
-sql.append("and d=? ");
-params.add(d);
+if (d==null){
+  sql.append("and d is null ");
+} else {
+  sql.append("and d=? ");
+  params.add(d);
+}
 return doQuery( sql.toString(), params);
 ```
 
@@ -43,7 +47,42 @@ SQL 敘述跟參數容易因人為失誤而有不一致，若是測試不夠完�
 
 * 使用 WhereBuilder 的情境如下
 
+  
+
+
+
 ```
+final SimpleQueryExecutor executor = SimpleQueryExecutor.fromTable(xxx);
+executor.equalsClause("a", a);
+executor.equalsClause("b", b);
+executor.betweenClause("c", c1, c2);
+executor.required().equalsClause("d", d);
+
+
+
+
+
+
+
+
+
+
+
+
+
+executor.equalsClause("a", a);
+
+
+
+
+
+
+
+()
+
+
+
+
 ```
 
 ### 1
