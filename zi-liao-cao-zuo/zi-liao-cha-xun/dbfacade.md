@@ -1,10 +1,9 @@
 ## DBFacade的查詢函式
 
-
 ### 多列查詢 (NativeSQL as DBRowMap)
-
-* 定義於 **SqlSelector** 介面。
-* 原則上查詢字串使用 NativeSQL ，除非選用支援 HQL/... 的底層實作。
+  
+  * 定義於 **SqlSelector** 介面。
+  * 原則上查詢字串使用 NativeSQL ，除非選用支援 HQL/... 的底層實作。
 
 * #### 回傳結果以 DBRowMap 表示
 
