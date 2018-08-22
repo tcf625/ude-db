@@ -6,14 +6,17 @@
 * 可取得原始 JDBC Connection。
 * 可取得 SqlSelector, SqlExecutor 等基本操作類別。
 
+### SqlSelector
+### SqlExecutor 
+
+## DBFacade
+
+UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 ## DBFacadeFactory
 
 建立DBFacade 的工廠類別，一般以 Spring 自動注入此元件。
 
-## DBFacade
-
-UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 * 詳見資料操作
 
