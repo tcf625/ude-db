@@ -17,10 +17,30 @@ WhereBuilder 的早期發展，是為了一種常見案例 :
 
 ``` java
 StringBuilder sql = new StringBuilder("select * from xxx where 1=1 ");
+List<String> params = new ArrayList<>();
 
 
- 
+if (StringUtils.isNotBlank(a)) {
+  sql.append("and a=? ");
+  params.add(a);
+}
+if (StringUtils.isNotBlank(b)) {
+  sql.append("and b=? ");
+  params.add(b);
+}
 
+
+
+
+
+
+
+
+
+
+
+
+return doQuery( sql.toString(), params);
 ```
 
 
