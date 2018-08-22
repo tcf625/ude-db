@@ -14,6 +14,7 @@
   
   
 * lambda :
+
   ``` java
-  static Function<DBRowMap, String> joinFunction(String separator, List<String> keys);
+  static Function<DBRowMap, String> joinFunction(String separator, List<String> keys)
   ```
