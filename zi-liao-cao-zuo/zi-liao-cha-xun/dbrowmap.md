@@ -102,14 +102,14 @@ void addRepeatString(String, int times) // 重複加入
 進行分頁查詢時，也就是以每頁 N 筆，要求取得第 M 頁的資料列表時，所使用的參數類別。
 
 ``` java
-
+1
 ```
 
 * ### 靜態常數
 
-* PageParams.FIRST_ROW : PageParams
-* PageParams.LIST_ALL : PageParams
-*
+  * PageParams.FIRST_ROW : 只取第一筆資料
+  * PageParams.LIST_ALL : 取回所有資料
+
 
 
 
