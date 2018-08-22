@@ -8,7 +8,7 @@
 
 ## 資料操作
 
-* [DBRowMap](zi-liao-cao-zuo/zi-liao-cha-xun/dbrowmap.md)
+* [資料操作](zi-liao-cao-zuo/zi-liao-cha-xun/dbrowmap.md)
 * [O-R Mapping](zi-liao-cao-zuo/o-r-mapping.md)
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
   * [DBFacade的查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacade.md)
