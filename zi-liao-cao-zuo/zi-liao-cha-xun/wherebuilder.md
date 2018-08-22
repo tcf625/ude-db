@@ -56,7 +56,45 @@ executor.required().equalsClause("d", d);
 return executor.executeQuery(dbFacade);
 ```
 
-### 1
+### IWhereBuilder 
+
+``` java
+/**
+ * @param <T> 如何傳入 COLUMN 定義
+ */
+ 
+addAndClauses(Consumer<IWhereBuilder<T>>)
+addNotClauses(Consumer<IWhereBuilder<T>>)
+addOrClauses(Consumer<IWhereBuilder<T>>)
+andClauses()
+betweenClause(String, T, SqlType, Object, Object)
+betweenClause(T, String, String)
+clause(String, T, OP, SqlType, Object)
+clause(T, OP, SqlType, Object)
+clause(T, OP, String)
+equalsClause(String, T, SqlType, Object)
+equalsClause(T, SqlType, Object)
+equalsClause(T, String)
+extraClause(ExtraClauseOP, String)
+getClauseSize()
+inClause(String, T, List<String>)
+inClause(String, T, QueryParams)
+inClause(T, List<String>)
+inClause(T, String[])
+likeClause(String, T, String)
+likeClause(T, String)
+notClauses()
+notInClause(String, T, QueryParams)
+notNullClause(String, T)
+nullClause(String, T)
+nullClause(T)
+orClauses()
+required()
+specClause(String, QueryParam...)
+specClause(String, QueryParams)
+startWithClause(String, T, String)
+startWithClause(T, String)
+```
 
 
 
