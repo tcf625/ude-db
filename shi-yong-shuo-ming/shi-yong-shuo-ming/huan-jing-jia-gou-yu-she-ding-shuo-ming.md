@@ -29,3 +29,30 @@
   </dependency>  
   ```
 
+### 環境架構與設定說明
+
+#### Hibernate
+
+先以 Hibernate 為例，Spring Context 應在宣告 SessionFactory 處，加入 DBFacadeHibernateConfiguration，以建立資料庫模組的必要元件 Bean，主要是
+
+* PersistenceContext
+* DBFacadeFactory
+
+``` xml
+<bean class="com.iisigroup.ude.configuration.DBFacadeHibernateConfiguration">
+    <constructor-arg ref="mySessionFactory" />
+</bean>
+<bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <!-- SPRING-ORM -->
+    <!-- 以下為測試範例內容，使用時應自行更改 -->    
+    <property name="dataSource" ref="testDataSource1" />
+    <property name="packagesToScan" value="sample.ude.db.entity" />
+    <property name="hibernateProperties">
+        <props>
+            <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+        </props>
+    </property>
+</bean>
+```
+
+
