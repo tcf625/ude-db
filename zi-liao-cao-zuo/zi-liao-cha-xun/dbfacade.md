@@ -1,12 +1,12 @@
-# DBFacade (查詢)
+## DBFacade的查詢函式
 
 
-## 多列查詢 (NativeSQL as DBRowMap)
+### 多列查詢 (NativeSQL as DBRowMap)
 
 * 定義於 **SqlSelector** 介面。
 * 原則上查詢字串使用 NativeSQL ，除非選用支援 HQL/... 的底層實作。
 
-### * 回傳結果以 DBRowMap 表示
+* #### 回傳結果以 DBRowMap 表示
 
 * 每一筆資料列的回傳結果以 **DBRowMap** 表示。
 * \( PagedQueryResults extends PagedArrayList < DBRowMap\> \)
@@ -17,7 +17,7 @@ PagedQueryResults queryForList(String, QueryParams)
 PagedQueryResults queryForList(String, QueryParams, PageParams)
 ```
 
-### * 自行定義資料轉換器
+* #### 自行定義資料轉換器
 
 ``` java
 <T> PagedList<T> queryForList(MapConverter<T>, String)
