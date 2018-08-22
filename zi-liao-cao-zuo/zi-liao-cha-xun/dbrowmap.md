@@ -46,8 +46,29 @@ public class PageInfo implements Serializable {
   
 ## 查詢參數：QueryParam & QueryParams
 
+ 為防止 SQL injection 攻擊，一般會建議使用 PreparedStatement 查詢。
+ 其中查詢語句的每一個 ? 參數，它的對應值就是一個 QueryParam 物件。
+ 使用時可以利用以下兩個建構子建立，也可以使用 QueryParams 提供的其它建構方法。
+ 
+``` java
+    public QueryParam(SqlType sqlType, Object value) {
+        this.sqlType = sqlType;
+        this.value = value;
+    }
+    public QueryParam(String value) {
+        this.sqlType = SqlType.CHAR;
+        this.value = value;
+    }
+```
+  
+ 
+ 
+ 而 QueryParams implements List < QueryParam \>，是 QueryParam 的集合物件，在 ude-db 實作中。
+ 
+ 
 
 
+  
 
 ## 分頁查詢參數：PageParams
 
