@@ -30,6 +30,8 @@ int updateBatch(String, List<QueryParams>)
 ### DBFacade
 
 UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
+包含 SqlSelector / SqlExecutor 可執行的操作，以及 OR Mapping 的相關操作。
+ 
 詳見「資料操作」相關說明。
 
 ### DBFacadeFactory
