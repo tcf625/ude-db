@@ -60,13 +60,21 @@ public class PageInfo implements Serializable {
         this.value = value;
     }
 ```
-  
- 
- 
- 而 QueryParams implements List < QueryParam \>，是 QueryParam 的集合物件，在 ude-db 實作中。
- 
- 
 
+* ### QueryParams   
+ 
+  * QueryParams 實作 List < QueryParam \> 介面，是 QueryParam 的集合物件。
+  * 在 ude-db 的多數函式，必要時，會以此類別做為傳入參數。
+
+* #### 靜態建構式
+ 
+  為簡化使用，QueryParams 提供靜態建構式如下：
+ 
+``` java
+  static QueryParams from(Object...)
+  static QueryParams fromString(List<String>)
+  static QueryParams fromString(String...)
+```
 
   
 
