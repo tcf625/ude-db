@@ -108,7 +108,7 @@ private int pageNo   = 1;
 public static PageParams bySizeAndNumber(int size, int no);
 ```
 
-預設為查詢前 10 筆資料，若 pageSize <=0 則表示取回所有資料。
+預設為查詢前 10 筆資料，若 pageSize 小於等於 0，則表示取回所有資料。
 
 * ### 靜態常數
 
