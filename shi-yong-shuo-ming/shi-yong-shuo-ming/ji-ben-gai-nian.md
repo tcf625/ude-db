@@ -36,7 +36,7 @@ UDE 中操作資料庫的主要元件。資料增刪改查的操作入口。
 
 ### DBFacadeFactory
 
-建立DBFacade 的工廠類別，一般會以 Spring 自動注入此元件。
+建立DBFacade 的工廠類別，一般會以 Spring 注入此元件。
 
 ## 其它
 
