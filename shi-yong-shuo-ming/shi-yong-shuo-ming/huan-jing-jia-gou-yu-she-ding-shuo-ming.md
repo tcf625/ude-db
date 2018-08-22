@@ -2,7 +2,7 @@
 
 ### 引用元件
 
-  UDE使用MAVEN管理相依函式庫，開發環境需於MAVEN設定中加入公司內部 Repository 資訊，以取得UDE函式庫。
+  * UDE使用MAVEN管理相依函式庫，開發環境需於MAVEN設定中加入公司內部 Repository 資訊，以取得UDE函式庫。
 
   ``` xml
  
