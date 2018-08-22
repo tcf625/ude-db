@@ -15,7 +15,7 @@
    
 實際的操作說明，請看後續「資料查詢」、「資料異動」章節。
    
-### 常見的 EntityClass 字尾
+#### 常見的 EntityClass 字尾
 
 UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。
 常見的選擇如下，選用原則也通常與專案的資料表命名慣例有關。
@@ -42,11 +42,11 @@ int              update(PersistenceContext, T)
 
 ### EntityDAOFactory
 
-#### 使用 Hibernate
+* #### 使用 Hibernate
 
 這個情境比較單純，內建的 HibernateDAOFactory 回傳各自的 new GenericDAOImpl<T>(entityClass) 實例。
 
-#### 使用 JDBC
+* #### 使用 JDBC
 
 內建的 JDBCDAOFactory 負責基本的快取與建表查找。
 實際由 EntityClass 查找 EntityDAO 則由 JDBCDAOFinder 實作。
