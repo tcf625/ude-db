@@ -8,9 +8,11 @@
 
 ### SqlSelector
 
-提供 queryXXXX(....) 一系列的查詢函式。
+提供 queryXXXX(....) 等一系列的查詢函式。
 
 ### SqlExecutor
+
+提供 insert/update 函式執行 SQL 敘述，insert 函式可取得更多的執行結果，如insert時自動建立的鍵值。
 
 ``` java 
 InsertResult insert(String)
