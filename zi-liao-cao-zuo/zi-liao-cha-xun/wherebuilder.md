@@ -45,7 +45,7 @@ return doQuery( sql.toString(), params);
 程式碼看起來很長，而且可能會有一些後續維護上的成本。
 SQL 敘述跟參數容易因人為失誤而有不一致，若是測試不夠完備的話，很可能到上線後才出錯。
 
-* 使用 WhereBuilder 的情境如下
+* 使用 WhereBuilder 的情境如下，可以見到比較清爽的業務邏輯。
 
 ``` java
 final SimpleQueryExecutor executor = SimpleQueryExecutor.fromTable(xxx);
