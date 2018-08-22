@@ -96,11 +96,20 @@ void addRepeatString(String, int times) // 重複加入
   static QueryParams fromString(String...)    // SQL Type 為 CHAR
 ```
 
-  
 
 ## 分頁查詢參數：PageParams
 
+進行分頁查詢時，也就是以每頁 N 筆，要求取得第 M 頁的資料列表時，所使用的參數類別。
 
+``` java
+
+```
+
+* ### 靜態常數
+
+* PageParams.FIRST_ROW : PageParams
+* PageParams.LIST_ALL : PageParams
+*
 
 
 
