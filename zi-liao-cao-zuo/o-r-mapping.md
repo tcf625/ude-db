@@ -15,7 +15,8 @@
    
 ### 常見的 EntityClass 字尾
 
-UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。常見的選擇如下：
+UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。
+常見的選擇如下，選用原則也通常與專案的資料表命名慣例有關。
 
 * **Entity**
 * PO
@@ -48,7 +49,7 @@ int              update(PersistenceContext, T)
 內建的 JDBCDAOFactory 負責基本的快取與建表查找。
 實際由 EntityClass 查找 EntityDAO 則由 JDBCDAOFinder 實作。
 
-必要時，可複寫 DBFacadeJDBCConfiguration 中，有定義以下兩個 Bean。
+必要時，可複寫 DBFacadeJDBCConfiguration 的以下定義。
 
 ``` java
 @Bean
@@ -56,5 +57,12 @@ public DAOFinder jdbcDAOFinder() {
     return new JDBCDAOFinder();
 }
 ```
+
+JDBCDAOFinder
+
+
+
+
+
 
 
