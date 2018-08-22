@@ -63,10 +63,6 @@
 <bean class="com.iisigroup.ude.configuration.DBFacadeJDBCConfiguration">
     <constructor-arg index="0" ref="testDataSource1" />
 </bean>
-<jdbc:embedded-database id="testDataSource1" type="HSQL">
-    <jdbc:script location="sample-schema.sql" />
-    <jdbc:script location="sample-init-data.sql" />
-</jdbc:embedded-database>
 ```
 
 
