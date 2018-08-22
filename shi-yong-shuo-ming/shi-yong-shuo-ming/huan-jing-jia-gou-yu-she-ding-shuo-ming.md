@@ -55,4 +55,20 @@
 </bean>
 ```
 
+#### JDBC Template
+
+先以 Hibernate 為例，Spring Context 應在宣告 DataSource 處，加入 DBFacadeJDBCConfiguration，以建立資料庫模組的必要元件 Bean：
+
+``` xml
+    <bean class="com.iisigroup.ude.configuration.DBFacadeJDBCConfiguration">
+        <constructor-arg index="0" ref="testDataSource1" />
+    </bean>
+    <jdbc:embedded-database id="testDataSource1" type="HSQL">
+        <jdbc:script location="sample-schema.sql" />
+        <jdbc:script location="sample-init-data.sql" />
+    </jdbc:embedded-database>
+```
+
+
+
 
