@@ -25,7 +25,6 @@ UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。
 ### DAO Finder
 
 DBFacadeJDBCConfiguration 中，有定義以下兩個 Bean
-
 ``` java
 @Bean
 public JDBCDAOFactory jdbcDAOFactory() {
@@ -33,7 +32,6 @@ public JDBCDAOFactory jdbcDAOFactory() {
     jdbcDAOFactory.setDaoFinder(jdbcDAOFinder());
     return jdbcDAOFactory;
 }
-
 @Bean
 public DAOFinder jdbcDAOFinder() {
     return new JDBCDAOFinder();
