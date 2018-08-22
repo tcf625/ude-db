@@ -2,7 +2,7 @@
 
 * DBFacade 是基本的操作進入點
 
-* 可以搭配 WhereBuilder 指定查詢條件。
+* 多半可以搭配 WhereBuilder 指定查詢條件。
 
 * 在實務上，一般會使用 QueryExecutor 組成查詢 SQL。
 
