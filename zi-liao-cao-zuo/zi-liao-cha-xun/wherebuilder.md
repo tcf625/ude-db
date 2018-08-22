@@ -56,6 +56,21 @@ executor.required().equalsClause("d", d);
 return executor.executeQuery(dbFacade);
 ```
 
+* 或是 2.1.0 ~ 2.1.3 支援串接語法，但 2.1.4 會考慮移除，
+  因為加入 .required(). 或其它後來加入的 and/or 子句特性時，容易造成誤解/誤用。
+
+``` java
+return SimpleQueryExecutor.fromTable(xxx) //
+      .equalsClause("a", a) //
+      .equalsClause("b", b) //
+      .betweenClause("c", c1, c2) //
+      .required().equalsClause("d", d) //
+      .executeQuery(dbFacade); 
+```
+
+
+
+
 ### IWhereBuilder 
 
 泛型參數 T 是為了之後會介紹的另一個實作分支 EntityWhereBuilderWrapper 而設，表示如何傳入 COLUMN 定義
@@ -100,39 +115,33 @@ startWithClause(T, String)
 
 ####
 
+``` java
+specClause(String, QueryParam...)
+specClause(String, QueryParams)
+```
+
+1111
+
+
 
 ``` java
 addAndClauses(Consumer<IWhereBuilder<T>>)
 addNotClauses(Consumer<IWhereBuilder<T>>)
 addOrClauses(Consumer<IWhereBuilder<T>>)
+
 andClauses()
-betweenClause(String, T, SqlType, Object, Object)
-betweenClause(T, String, String)
-clause(String, T, OP, SqlType, Object)
-clause(T, OP, SqlType, Object)
-clause(T, OP, String)
-equalsClause(String, T, SqlType, Object)
-equalsClause(T, SqlType, Object)
-equalsClause(T, String)
-extraClause(ExtraClauseOP, String)
-getClauseSize()
-inClause(String, T, List<String>)
-inClause(String, T, QueryParams)
-inClause(T, List<String>)
-inClause(T, String[])
-likeClause(String, T, String)
-likeClause(T, String)
 notClauses()
-notInClause(String, T, QueryParams)
-notNullClause(String, T)
-nullClause(String, T)
-nullClause(T)
 orClauses()
 required()
-specClause(String, QueryParam...)
-specClause(String, QueryParams)
-startWithClause(String, T, String)
-startWithClause(T, String)
+```
+
+
+1111
+
+
+
+``` java
+extraClause(ExtraClauseOP, String)
 ```
 
 
