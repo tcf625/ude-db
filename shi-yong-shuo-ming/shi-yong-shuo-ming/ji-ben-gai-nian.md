@@ -1,13 +1,27 @@
 # 基本概念
 
-## PersistenceContext
+## PersistenceContext : 底階 API
 
 對應實際資料來源，如 DataSource / SessionFactory，視選用底層而定。
-* 可取得原始 JDBC Connection。
+* 可取得原始 JDBC Connection。(需自行注意資源管理)
 * 可取得 SqlSelector, SqlExecutor 等基本操作類別。
 
 ### SqlSelector
-### SqlExecutor 
+
+``` java 
+
+```
+
+### SqlExecutor
+
+``` java 
+InsertResult insert(String)
+InsertResult insert(String, QueryParams)
+InsertResult insertBatch(String, List<QueryParams>)
+int update(String)
+int update(String, QueryParams)
+int updateBatch(String, List<QueryParams>)
+```
 
 ## DBFacade
 
