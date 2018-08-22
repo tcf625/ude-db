@@ -8,9 +8,7 @@
 
 ### SqlSelector
 
-``` java 
-
-```
+提供 queryXXXX(....) 一系列的查詢函式。
 
 ### SqlExecutor
 
