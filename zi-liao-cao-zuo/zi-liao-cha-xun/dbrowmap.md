@@ -12,8 +12,6 @@
   * 取得資料文字格式用 get(Object)
   * 取得原始資料用 getRawData
   * 欄位文字合併輸出：joinText(String separator, List<String> keys)
-  
-  
 * lambda :
 
   ``` java
@@ -47,6 +45,10 @@ public class PageInfo implements Serializable {
   PagedQueryResults 繼承 PagedArrayList < DBRowMap \>，是多數查詢方法的預設回傳型態。
   
 ## 查詢參數：QueryParam & QueryParams
+
+
+
+
 ## 分頁查詢參數：PageParams
 
 
