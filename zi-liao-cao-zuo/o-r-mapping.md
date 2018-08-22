@@ -2,7 +2,7 @@
 
 ### 概念
 
-在 UDE-DB，要使用 OR Mapping，有兩種實作方式：
+在 UDE-DB，要使用 OR Mapping，有兩種實作方式可選：
 
 1. 底層選擇使用 Hibernate
 2. 底層使用 JDBC，並
