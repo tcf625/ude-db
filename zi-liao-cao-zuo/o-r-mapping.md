@@ -15,9 +15,9 @@
    
 ### 常見的 EntityClass 字尾
 
-UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。常見的選項如下：
+UDE 沒有規範 EntityClass 字尾，視專案及團隊的一致慣例即可。常見的選擇如下：
 
-* Entity
+* **Entity**
 * PO
 * Type
 
