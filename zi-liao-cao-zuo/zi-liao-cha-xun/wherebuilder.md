@@ -28,29 +28,18 @@ if (StringUtils.isNotBlank(b)) {
   sql.append("and b=? ");
   params.add(b);
 }
-if (StringUtils.isNotBlank(b)) {
-  sql.append("and b=? ");
-  params.add(b);
+if (StringUtils.isNotBlank(c1) && StringUtils.isNotBlank(c2)) {
+  sql.append("and (c between ? and ?) ");
+  params.add(c1);
+  params.add(c2);  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+sql.append("and d=? ");
+params.add(d);
 return doQuery( sql.toString(), params);
 ```
 
+程式碼看起來很長，而且可能會有一些後續維護上的成本。
 
-
-11
 
 
 
