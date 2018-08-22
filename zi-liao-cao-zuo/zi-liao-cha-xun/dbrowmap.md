@@ -22,11 +22,29 @@
   
 ## 查詢結果集合：PagedList / PageInfo
 
+PagedList 就是含分頁資訊的 List介面，UDE-DB 使用 PagedList 回應查詢結果。
 
+``` java
+public interface PagedList<E> extends List<E>, Serializable {
+    PageInfo getPageInfo();
+}
+public class PageInfo implements Serializable {
+    /** 目前頁次. */
+    private int pageNo = 1;
+    /** 每頁資料筆數. */
+    private int pageSize = 0;
+    /** 緦頁次. */
+    private int pageCount = 0;
+    /** 總資料筆數. */
+    private long dataCount = 0;
+    /** 索引值偏移量. */
+    private int indexOffset = 1;
+}
+```
 
+* ### PagedQueryResults 
 
-  
-  
+  PagedQueryResults 繼承 PagedArrayList < DBRowMap \>，是多數查詢方法的預設回傳型態。
   
 ## 查詢參數：QueryParam & QueryParams
 ## 分頁查詢參數：PageParams
