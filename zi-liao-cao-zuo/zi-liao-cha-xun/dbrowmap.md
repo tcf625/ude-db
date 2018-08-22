@@ -3,7 +3,7 @@
 以下說明如何以 UDE-DB 元件進行資料庫的增、刪、改、查操作。
 首先說明幾個常見的類別
 
-##  DBRowMap 
+## 查詢結果：DBRowMap 
 
 * 執行查詢時，每一筆資料列的回傳結果以 DBRowMap 表示。
 * 有點像 JDBCTemplate 中，Map<String, Object> queryForMap(String sql) 回傳的 MAP，但功能較多
@@ -19,3 +19,20 @@
   ``` java
   static Function<DBRowMap, String> joinFunction(String separator, List<String> keys)
   ```
+  
+## 查詢結果集合：PagedList / PageInfo
+
+
+
+
+  
+  
+  
+## 查詢參數：QueryParam & QueryParams
+## 分頁查詢參數：PageParams
+
+
+
+
+
+
