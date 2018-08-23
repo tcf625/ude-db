@@ -78,7 +78,6 @@ return QuerySqlExecutor.fromTable(xxx) //
 #### 比對條件子句
 
 * 基本原則是如果傳入值為空白(isBlank，包含由空白字元組成的情況)，就不會加入對應子句。
-
 * ##### betweenClause(String, T, SqlType, Object, Object)
 
 產出的子句像這樣，
