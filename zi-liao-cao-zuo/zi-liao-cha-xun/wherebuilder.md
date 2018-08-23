@@ -73,16 +73,35 @@ return QuerySqlExecutor.fromTable(xxx) //
 泛型參數 T 是為了之後會介紹的另一個實作分支 EntityWhereBuilderWrapper 而設，表示如何傳入 COLUMN 定義
 。在一般用法下，T 應該是 String 型別，直接傳入 Column 名稱。
 
+* 預設逐一加入的子句，彼此之間會使用 AND 連接。
+
 #### 比對條件子句
 
-* 預設逐一加入的子句，在彼此之間，會使用 AND 連接。
 * 基本原則是如果傳入值為空白(isBlank，包含由空白字元組成的情況)，就不會加入對應子句。
+
+* ##### betweenClause(String, T, SqlType, Object, Object)
+
+產出的子句像這樣，
+``` sql
+  (col >= ? and col <= ?) 
+```
+
+而非：
+``` sql
+  (col between ? and ?) 
+```
+
+這是我們 informix 的 DBA 所建議的語法，雖然根據查到的一些資料，在大多數的 DB 上效能應該沒有出入才對。
+
+* https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
+
+
 
 ``` java
 betweenClause(String, T, SqlType, Object, Object)
 betweenClause(T, String, String)
 
-clause(String, T, OP, SqlType, Object)
+clause(String tableAlias, T column, OP op, SqlType sqlType, Object value)
 clause(T, OP, SqlType, Object)
 clause(T, OP, String)
 
