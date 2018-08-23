@@ -8,10 +8,13 @@ public interface JDBCQueryExecutor {
     default PagedQueryResults executeQuery(final DBFacade dbFacade) {
         return this.executeQuery(dbFacade, PageParams.LIST_ALL);
     }
-    default <T> PagedList<T> executeQuery(final DBFacade dbFacade, final MapConverter<T> converter) {
+    default <T> PagedList<T> executeQuery(final DBFacade dbFacade, 
+           final MapConverter<T> converter) {
         return this.executeQuery(dbFacade, converter, PageParams.LIST_ALL);
     }
-    default <T> PagedList<T> executeQuery(final DBFacade dbFacade, final MapConverter<T> converter, final PageParams pageParams) {
+    default <T> PagedList<T> executeQuery(final DBFacade dbFacade, 
+           final MapConverter<T> converter, 
+           final PageParams pageParams) {
         return converter.convertToObjects(this.executeQuery(dbFacade, pageParams));
     }
     default Optional<DBRowMap> executeQueryFirstRow(final DBFacade dbFacade) {
