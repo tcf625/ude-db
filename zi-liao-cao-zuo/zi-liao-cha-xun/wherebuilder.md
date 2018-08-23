@@ -78,7 +78,22 @@ return QuerySqlExecutor.fromTable(xxx) //
 #### 比對條件子句
 
 * 基本原則是如果傳入值為空白(isBlank，包含由空白字元組成的情況)，就不會加入對應子句。
-* ##### betweenClause(String, T, SqlType, Object, Object)
+
+* 參數設計原則如下
+  * String tableAlias : 表格別名，若有產出的欄位名稱就會是
+  * T column : 欄位名稱，若有表格別名，產出的欄位名稱就會是 {tableAlias}.{column}
+  * 比對值，採用以下兩種之一：
+     * String value : 大多數情況適用，SqlType 定義為 CHAR。
+     * SqlType type / Object value：指定 SqlType 。
+
+* ##### equalsClause
+
+典型的比對條件
+
+
+
+* ##### betweenClause (...)
+
 產出的子句像這樣，
 ``` sql
   (col >= ? and col <= ?) 
@@ -92,6 +107,8 @@ return QuerySqlExecutor.fromTable(xxx) //
 這是我們 informix 的 DBA 所建議的語法，雖然根據查到的一些資料，在大多數的 DB 上效能應該沒有出入才對。
 
 * https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
+
+
 
 
 
