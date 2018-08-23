@@ -53,7 +53,7 @@ executor.required().equalsClause("d", d);
 return executor.executeQuery(dbFacade);
 ```
 
-* 2.1.0 ~ 2.1.2 支援串接語法，但 2.1.3 會移除，
+* 2.1.0 ~ 2.1.3 支援串接語法，但 2.1.4 會移除，
   因為加入 .required(). 或其它後來加入的 and/or 子句特性時，容易造成誤解/誤用。
 
 ``` java
