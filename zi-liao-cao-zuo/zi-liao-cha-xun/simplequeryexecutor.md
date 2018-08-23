@@ -32,11 +32,13 @@ public interface JDBCQueryExecutor {
 
 #### 針對單一 TABLE 的查詢
 
+靜態建構方法
+
 ``` java
   final QuerySqlExecutor se = QuerySqlExecutor.fromTable(tableName);
 ```
 
-或是   
+或是之後取得 TableBuilder
 
 ``` java   
   final QuerySqlExecutor se = new QuerySqlExecutor();
