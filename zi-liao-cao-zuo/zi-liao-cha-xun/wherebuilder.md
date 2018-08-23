@@ -109,69 +109,88 @@ public enum OP {
   是因為我們 informix 的 DBA 建議採用第一種語法。雖然根據查到的一些資料、討論，兩者在多數 DB 上效能應該沒有出入才對。
   * https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
 
-* ##### inClause (...)
+* ##### inClause (...) & notInClause (...)
 
 傳入比對值的型別是 List<String> / QueryParams。
 只要傳入集合中有值，就產出子句。
-如果傳入的數量只有一個，就產出 ``` {column}=? ``` 。
-如果傳入的數量有多個，就是 IN 子句 ``` {column} in (?, ?, ...) ``` 。但應該要注意參數的數量，不要超過 SQL 的限制。
+如果傳入的數量只有一個，就產出 ``` {column}=? ``` 或 ``` {column} <> ? ``` 。
+如果傳入的數量有多個，就是 IN 子句 ``` {column} in (?, ?, ...) ``` 或 ``` {column} not in (?, ?, ...) ```。
+但應該要注意參數的數量，不要超過 SQL 的限制。
+
+* ##### likeClause (...) & startWithClause (...)
+
+  
+  likeClause/startWithClause 只接受 String 型別輸入。
+  產出子句如 :  
+  
+  * https://stackoverflow.com/questions/8247970/using-like-wildcard-in-prepared-statement
 
 
-* ##### notInClause (...)
+* ##### nullClause & notNullClause (...)
 
-傳入比對值的型別是 List<String> / QueryParams。
-與 inClause 一樣，只要傳入集合中有值，就產出子句。
-如果傳入的數量只有一個，就產出 ``` {column} <> ? ``` 。
-如果傳入的數量有多個，就是 NOT IN 子句 ``` {column} not in (?, ?, ...) ``` 。但應該要注意參數的數量，不要超過 SQL 的限制。
+  因為沒有可比對值，所以產出就是 ``` {column} is null ``` 或 ``` {column} is not null ``` 。
 
 
+#### 其它語法
 
-likeClause(String, T, String)
-likeClause(T, String)
-
-
-notNullClause(String, T)
-nullClause(String, T)
-nullClause(T)
-
-startWithClause(String, T, String)
-startWithClause(T, String)
-
-
-
-####
+其它未能支援的複雜 SQL 子句 ，可使用此函式直接加入。
 
 ``` java
 specClause(String, QueryParam...)
 specClause(String, QueryParams)
 ```
 
-1111
 
+#### 串接 OR / AND / NOT 語法
 
+使用 lambda 風格較佳，比較不會誤用 xxxClauses 回傳的子句 BUILDER .
 
 ``` java
-addAndClauses(Consumer<IWhereBuilder<T>>)
-addNotClauses(Consumer<IWhereBuilder<T>>)
-addOrClauses(Consumer<IWhereBuilder<T>>)
+void addAndClauses(Consumer<IWhereBuilder<T>>)
+void addNotClauses(Consumer<IWhereBuilder<T>>)
+void addOrClauses(Consumer<IWhereBuilder<T>>)
 
-andClauses()
-notClauses()
-orClauses()
-required()
+WhereClauses<T> andClauses()
+WhereClauses<T> notClauses()
+WhereClauses<T> orClauses()
 ```
 
 
-1111
+#### 必要條件
+
+''' java 
+void addRequiredClauses(Consumer<IWhereBuilder<T>>)
+WhereClauses<T>  required()
+'''
+
+required 回傳的 WhereClauses，有傳入值的子句方法，在輸入為空時，會有不同的產出。
+
+如 equals : 會變為 is null 或 =? 
+
+   > < >= <= 等 OP，如傳入為 '' 會丟出 DB4005E 例外
+   
 
 
 
-``` java
-extraClause(ExtraClauseOP, String)
+#### GROUP BY / ORDER BY
+
+``` java 
+// extraClause(ExtraClauseOP, String)
+
+qe.extraClause(ExtraClauseOP.OrderBy, "site");
+qe.extraClause(ExtraClauseOP.OrderBy, "age desc");
+qe.extraClause(ExtraClauseOP.OrderBy, "gender");
+// Order by site, age desc, gender
 ```
 
 
 
+------------
+
+TODO : 再加上以下兩個，常用的大概就差不多了
+
+void  inTable(subQuery) // WHERE column_name IN (SELECT STATEMENT); 
+void  exists (subQuery) // EXISTS (SELECT column_name FROM table_name WHERE condition); 
 
  
 
