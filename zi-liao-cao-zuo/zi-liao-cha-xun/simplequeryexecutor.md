@@ -28,10 +28,17 @@ public interface JDBCQueryExecutor {
 ```
 
 
-
 # 'From'
 
 ## 針對單一 TABLE 的查詢
+
+''' java
+  final QuerySqlExecutor se = QuerySqlExecutor.fromTable(tableName);
+  
+  
+  final QuerySqlExecutor se = new QuerySqlExecutor();
+  se.getTableBuilder().add(tableName);  
+'''
 
 ## TABLE Join
 
