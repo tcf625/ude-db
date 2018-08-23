@@ -49,8 +49,8 @@ public interface MapConverter<T> {
 ``` java
 <T> PagedList<T> queryForList(Class<T> cls) 
 <T> PagedList<T> queryForList(Class<T> cls, PageParams pageParams) 
-<T> PagedList<T> queryForList(Class<T> cls, StringWhereBuilder whereBuilder) 
-<T> PagedList<T> queryForList(Class<T> cls, StringWhereBuilder whereBuilder, PageParams pageParams);
+<T> PagedList<T> queryForList(Class<T> cls, WhereBuilder whereBuilder) 
+<T> PagedList<T> queryForList(Class<T> cls, WhereBuilder whereBuilder, PageParams pageParams);
 ```
 
 

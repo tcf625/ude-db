@@ -12,7 +12,7 @@
 * [O-R Mapping](zi-liao-cao-zuo/o-r-mapping.md)
 * [資料查詢](zi-liao-cao-zuo/zi-liao-cha-xun.md)
   * [DBFacade：基本多列查詢](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacade.md)
-  * [IWhereBuilder 介面](zi-liao-cao-zuo/zi-liao-cha-xun/wherebuilder.md)
+  * [WhereClauses 介面](zi-liao-cao-zuo/zi-liao-cha-xun/wherebuilder.md)
   * [DBFacade：其它查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacadeff1a-qi-ta-cha-xun-han-shi.md)
   * [SimpleQueryExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/simplequeryexecutor.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
