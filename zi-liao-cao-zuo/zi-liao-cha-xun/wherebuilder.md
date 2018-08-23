@@ -166,8 +166,7 @@ WhereClauses<T>  required()
 required 回傳的 WhereClauses，有傳入值的子句方法，在輸入為空時，會有不同的產出。
 
 如 equals : 會變為 is null 或 =? 
-
-   > < >= <= 等 OP，如傳入為 '' 會丟出 DB4005E 例外
+如 > < >= <= 等 OP，如傳入為 '' 會丟出 DB4005E 例外
    
 
 
