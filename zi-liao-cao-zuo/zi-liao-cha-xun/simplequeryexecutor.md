@@ -28,29 +28,53 @@ public interface JDBCQueryExecutor {
 ```
 
 
-# 'From'
+### 'From' 子句
 
-## 針對單一 TABLE 的查詢
+#### 針對單一 TABLE 的查詢
 
-''' java
+``` java
   final QuerySqlExecutor se = QuerySqlExecutor.fromTable(tableName);
-  
-  
+```
+
+或是   
+
+``` java   
   final QuerySqlExecutor se = new QuerySqlExecutor();
   se.getTableBuilder().add(tableName);  
-'''
+```
 
-## TABLE Join
+#### TABLE Join
+
+``` java 
+final Table tableA = tableBuilder.add(subQuery, "a");
+tableA.joinWithAlias("nccd1000", "b", Table.joinUsing("nationality", "code")); 
+```
+
+SQL : 
+
+``` sql 
+FROM (  SELECT STAT
+        , GENDER
+        , REASON
+        , NATIONALITY
+     FROM NCDF0003
+    WHERE (REG_DATE >= ? AND REG_DATE <= ?)
+      AND NATIONALITY <> '000' )  AS A JOIN NCCD1000 AS B ON A.NATIONALITY=B.CODE
+```
 
 
+### 'Columns' 子句
+```
+final SimpleQueryExecutor qe = new SimpleQueryExecutor();
+// SELECT
+qe.addColumn("b.code_g1");//
+qe.addColumnWithAlias("SUM(case when a.gender='1' then stat else 0 end)", "column02");//
+qe.addColumnWithAlias("SUM(case when a.gender='2' then stat else 0 end)", "column03");//
+```
 
-# 'Columns'
+
+### 'Where' / 'Order By' / 'Group By'  子句
+
+使用 WhereClauses 。
 
 
-
-
-# 'Where'
-
-
-
-# 'Order By' / 'Group By' 
