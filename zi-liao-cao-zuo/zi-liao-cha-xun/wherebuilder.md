@@ -77,7 +77,7 @@ return QuerySqlExecutor.fromTable(xxx) //
 
 #### 比對條件子句
 
-* 基本原則是如果傳入值為空白(isBlank，包含由空白字元組成的情況)，就不會加入對應子句。
+* 基本原則是如果傳入值為 NULL 或空白(isEmpty)，就不會加入對應子句。
 
 * 參數設計原則如下
   * String tableAlias : 表格別名，若有產出的欄位名稱就會是
@@ -86,27 +86,30 @@ return QuerySqlExecutor.fromTable(xxx) //
      * String value : 大多數情況適用，SqlType 定義為 CHAR。
      * SqlType type / Object value：指定 SqlType 。
 
-* ##### equalsClause
+* ##### equalsClause (...)
 
-典型的比對條件
+典型的比對條件，產出子句為：{column}=?
+
+* ##### clause (...)
+
+與 equalsClause 相比，多加上一個 OP 參數欄位，產出子句為：``` {column} {OP} ? ```
+
+``` java
+public enum OP {
+   LT("<"), LE("<="), GT(">"), GE(">="), EQ("="), NE("<>");
+   ... 
+}
+```
+
 
 
 
 * ##### betweenClause (...)
 
-產出的子句像這樣，
-``` sql
-  (col >= ? and col <= ?) 
-```
-
-而非：
-``` sql
-  (col between ? and ?) 
-```
-
-這是我們 informix 的 DBA 所建議的語法，雖然根據查到的一些資料，在大多數的 DB 上效能應該沒有出入才對。
-
-* https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
+  產出的子句像這樣： ```(col >= ? and col <= ?)```  
+  而非： ```(col between ? and ?)```  
+  是因為我們 informix 的 DBA 建議採用第一種語法。雖然根據查到的一些資料、討論，兩者在多數 DB 上效能應該沒有出入才對。
+  * https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
 
 
 
