@@ -1,4 +1,4 @@
-## WhereBuilder   ( WhereClauses < String\> )
+## WhereBuilder ```( WhereClauses<String> )```
 
 WhereBuilder 是目前 UDE-DB 提供的輔助類別中的一個重要結構。
 
