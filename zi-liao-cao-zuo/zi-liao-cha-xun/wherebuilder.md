@@ -163,13 +163,17 @@ void addRequiredClauses(Consumer<IWhereBuilder<T>>)
 WhereClauses<T>  required()
 '''
 
-required 回傳的 WhereClauses，有傳入值的子句方法，在輸入為空時，會有不同的產出。
+required 回傳的 WhereClauses，有傳入值的子句方法，在輸入為空時，會有不同的產出。如 
 
-如 equals : 會變為 is null 或 =? 
-如 > < >= <= 等 OP，如傳入為 '' 會丟出 DB4005E 例外
-   
+* equals : 會變為 is null 或 =? 
+* <> : 會變為 is not null 或 <>? 
+* ```> < >= <=``` 等 OP，如傳入為 NULL，會丟出 DB4005E 例外
 
-
+* inClause 
+  * in null ==>  ```{column} is null  ```
+  * in {}   ==>  ```1=0```
+* like / startWith 
+  * like null / like '%%' => 行為一樣，不加入任何子句。
 
 #### GROUP BY / ORDER BY
 
