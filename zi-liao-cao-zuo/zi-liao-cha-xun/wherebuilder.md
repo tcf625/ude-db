@@ -93,7 +93,7 @@ return QuerySqlExecutor.fromTable(xxx) //
 * ##### clause (...)
 
 與 equalsClause 相比，多加上一個 OP 參數欄位，產出子句為：``` {column} {OP} ? ```
-
+OP 種類定義如下：
 ``` java
 public enum OP {
    LT("<"), LE("<="), GT(">"), GE(">="), EQ("="), NE("<>");
@@ -101,11 +101,9 @@ public enum OP {
 }
 ```
 
-
-
-
 * ##### betweenClause (...)
 
+  參
   產出的子句像這樣： ```(col >= ? and col <= ?)```  
   而非： ```(col between ? and ?)```  
   是因為我們 informix 的 DBA 建議採用第一種語法。雖然根據查到的一些資料、討論，兩者在多數 DB 上效能應該沒有出入才對。
