@@ -72,7 +72,6 @@ return SimpleQueryExecutor.fromTable(xxx) //
 泛型參數 T 是為了之後會介紹的另一個實作分支 EntityWhereBuilderWrapper 而設，表示如何傳入 COLUMN 定義
 。在一般用法下，T 應該是 String 型別，直接傳入 Column 名稱。
 
-
 #### 比對條件子句
 
 * 預設逐一加入的子句，在彼此之間，會使用 AND 連接。
