@@ -4,7 +4,9 @@
 
 ``` java
 public interface JDBCQueryExecutor {
-    PagedQueryResults executeQuery(final DBFacade dbFacade, final PageParams pageParams);
+    PagedQueryResults executeQuery(final DBFacade dbFacade, 
+            final PageParams pageParams);
+            
     default PagedQueryResults executeQuery(final DBFacade dbFacade) {
         return this.executeQuery(dbFacade, PageParams.LIST_ALL);
     }
