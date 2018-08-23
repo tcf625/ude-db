@@ -9,8 +9,8 @@ WhereBuilder 是目前 UDE-DB 提供的輔助類別中的一個重要結構。
 
 ### 用途
 
-早期發展 WhereBuilder 這個類別，是為了下列常見案例 : 
-這是在一些早期專案中，可能會看到的寫法
+早期發展 WhereBuilder 這個類別，是為了下列常見案例，這是在一些專案中，可能會看到的寫法 : 
+
 
 ``` java
 StringBuilder sql = new StringBuilder("select * from xxx where 1=1 ");
