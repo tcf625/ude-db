@@ -66,7 +66,8 @@ FROM (  SELECT STAT
 
 
 ### 'Columns' 子句
-```
+
+``` java 
 final SimpleQueryExecutor qe = new SimpleQueryExecutor();
 // SELECT
 qe.addColumn("b.code_g1");//
