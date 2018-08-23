@@ -14,7 +14,7 @@
   * [DBFacade：基本多列查詢](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacade.md)
   * [WhereClauses 介面](zi-liao-cao-zuo/zi-liao-cha-xun/wherebuilder.md)
   * [DBFacade：其它查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacadeff1a-qi-ta-cha-xun-han-shi.md)
-  * [SimpleQueryExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/simplequeryexecutor.md)
+  * [QuerySqlExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/simplequeryexecutor.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
   * [DBFacade的異動操作函式](zi-liao-cao-zuo/zi-liao-yi-dong/dbfacadede-yi-dong-cao-zuo-han-shi.md)
 
