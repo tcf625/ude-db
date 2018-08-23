@@ -43,8 +43,10 @@ return doQuery( sql.toString(), params);
 * 使用 WhereBuilder 的情境如下，可以見到比較清爽的業務邏輯。
 
 ``` java
-// SimpleQueryExecutor implements IWhereBuilder 
-final SimpleQueryExecutor executor = SimpleQueryExecutor.fromTable(xxx);
+
+// QuerySqlExecutor implements WhereClauses<String>
+
+final QuerySqlExecutor executor = QuerySqlExecutor .fromTable(xxx);
 executor.equalsClause("a", a);
 executor.equalsClause("b", b);
 executor.betweenClause("c", c1, c2);
@@ -56,7 +58,7 @@ return executor.executeQuery(dbFacade);
   因為加入 .required(). 或其它後來加入的 and/or 子句特性時，容易造成誤解/誤用。
 
 ``` java
-return SimpleQueryExecutor.fromTable(xxx) //
+return QuerySqlExecutor.fromTable(xxx) //
       .equalsClause("a", a) //
       .equalsClause("b", b) //
       .betweenClause("c", c1, c2) //
