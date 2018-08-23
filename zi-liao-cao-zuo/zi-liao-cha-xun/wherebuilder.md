@@ -7,7 +7,6 @@ WhereBuilder 是目前 UDE-DB 提供的輔助類別中的一個重要結構。
 * 在 2017 下半 ~ 2018 上半年度(v2.1.0~)，基於此類別之上，增加很多輔助類別與函式，但較為倉促，有些設計可能不夠完備。預計2018.12 的 v2.1.4 會把相關的單元測試及使用範例做較為完整的補充。
 
 
-
 ### 用途
 
 WhereBuilder 的早期發展，是為了下列這種常見案例 : 
@@ -68,8 +67,7 @@ return SimpleQueryExecutor.fromTable(xxx) //
 
 
 
-
-### WhereClauses < T \>
+### 介面說明 WhereClauses < T \>
 
 泛型參數 T 是為了之後會介紹的另一個實作分支 EntityWhereBuilderWrapper 而設，表示如何傳入 COLUMN 定義
 。在一般用法下，T 應該是 String 型別，直接傳入 Column 名稱。
