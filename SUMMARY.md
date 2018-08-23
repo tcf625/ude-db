@@ -15,6 +15,7 @@
   * [WhereClauses 介面](zi-liao-cao-zuo/zi-liao-cha-xun/wherebuilder.md)
   * [DBFacade：其它查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacadeff1a-qi-ta-cha-xun-han-shi.md)
   * [QuerySqlExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/simplequeryexecutor.md)
+  * StatementExecutor
   * EntityQuerier
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
   * [DBFacade的異動操作函式](zi-liao-cao-zuo/zi-liao-yi-dong/dbfacadede-yi-dong-cao-zuo-han-shi.md)
