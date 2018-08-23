@@ -103,45 +103,40 @@ public enum OP {
 
 * ##### betweenClause (...)
 
-  參
-  產出的子句像這樣： ```(col >= ? and col <= ?)```  
-  而非： ```(col between ? and ?)```  
+  參數的比對值會有兩個，value1/value2，使用時應該要自行確認輸入順序。
+  當兩者都不是空字串時，才會產出子句。
+  產出的子句像這樣： ```(col >= ? and col <= ?)``` ；而非： ```(col between ? and ?)```  
   是因為我們 informix 的 DBA 建議採用第一種語法。雖然根據查到的一些資料、討論，兩者在多數 DB 上效能應該沒有出入才對。
   * https://stackoverflow.com/questions/2692593/between-operator-vs-and-is-there-a-performance-difference
 
+* ##### inClause (...)
+
+傳入比對值的型別是 List<String> / QueryParams。
+只要傳入集合中有值，就產出子句。
+如果傳入的數量只有一個，就產出 ``` {column}=? ``` 。
+如果傳入的數量有多個，就是 IN 子句 ``` {column} in (?, ?, ...) ``` 。但應該要注意參數的數量，不要超過 SQL 的限制。
 
 
+* ##### notInClause (...)
+
+傳入比對值的型別是 List<String> / QueryParams。
+與 inClause 一樣，只要傳入集合中有值，就產出子句。
+如果傳入的數量只有一個，就產出 ``` {column} <> ? ``` 。
+如果傳入的數量有多個，就是 NOT IN 子句 ``` {column} not in (?, ?, ...) ``` 。但應該要注意參數的數量，不要超過 SQL 的限制。
 
 
-``` java
-betweenClause(String, T, SqlType, Object, Object)
-betweenClause(T, String, String)
-
-clause(String tableAlias, T column, OP op, SqlType sqlType, Object value)
-clause(T, OP, SqlType, Object)
-clause(T, OP, String)
-
-equalsClause(String, T, SqlType, Object)
-equalsClause(T, SqlType, Object)
-equalsClause(T, String)
-
-inClause(String, T, List<String>)
-inClause(String, T, QueryParams)
-inClause(T, List<String>)
-inClause(T, String[])
 
 likeClause(String, T, String)
 likeClause(T, String)
 
-notInClause(String, T, QueryParams)
-notNullClause(String, T)
 
+notNullClause(String, T)
 nullClause(String, T)
 nullClause(T)
 
 startWithClause(String, T, String)
 startWithClause(T, String)
-```
+
 
 
 ####
