@@ -19,7 +19,9 @@
   * EntityQuerier
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
   * [DBFacade的異動操作函式](zi-liao-cao-zuo/zi-liao-yi-dong/dbfacadede-yi-dong-cao-zuo-han-shi.md)
-
+  * ~SqlExecutor  
+  * EntityUpdater & EntityDeleter
+    
 ## 進階使用
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
