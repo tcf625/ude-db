@@ -9,5 +9,5 @@
    
 -----
    
-* 為什麼沒有 Insert 的對應類別  : 
+* 為什麼沒有 Insert 的對應類別 ? 
   * 用 DBFacade.insert 就好了。
