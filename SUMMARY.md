@@ -27,7 +27,6 @@
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
 * 外部設定檔
-* 多重資料來源
-* [其它](jin-jie-shi-yong/qi-ta.md)
-  * [](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
+* [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
+
 
