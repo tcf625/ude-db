@@ -15,13 +15,13 @@
   * [WhereClauses 介面](zi-liao-cao-zuo/zi-liao-cha-xun/wherebuilder.md)
   * [DBFacade：其它查詢函式](zi-liao-cao-zuo/zi-liao-cha-xun/dbfacadeff1a-qi-ta-cha-xun-han-shi.md)
   * [QuerySqlExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/simplequeryexecutor.md)
-  * StatementExecutor
-  * EntityQuerier
+  * [StatementExecutor](zi-liao-cao-zuo/zi-liao-cha-xun/statementexecutor.md)
+  * [EntityQuerier](zi-liao-cao-zuo/zi-liao-cha-xun/entityquerier.md)
 * [資料異動](zi-liao-cao-zuo/zi-liao-yi-dong.md)
   * [DBFacade的異動操作函式](zi-liao-cao-zuo/zi-liao-yi-dong/dbfacadede-yi-dong-cao-zuo-han-shi.md)
-  * ~SqlExecutor  
-  * EntityUpdater & EntityDeleter
-    
+  * [~SqlExecutor  ](zi-liao-cao-zuo/zi-liao-yi-dong/~sqlexecutor.md)
+  * [EntityUpdater & EntityDeleter](zi-liao-cao-zuo/zi-liao-yi-dong/entityupdater-and-entitydeleter.md)
+
 ## 進階使用
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
