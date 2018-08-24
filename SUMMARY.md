@@ -26,6 +26,7 @@
 ## 進階使用
 
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
+* 外部設定檔
 * [其它](jin-jie-shi-yong/qi-ta.md)
   * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
 
