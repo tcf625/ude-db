@@ -1,6 +1,6 @@
 ### DBFacade的異動操作函式
 
-```
+
 ### Native SQL
 
 * 回傳異動筆數。
