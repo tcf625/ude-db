@@ -1,6 +1,6 @@
-####
+#### ~SqlExecutor
 
-
+利用 ~SqlExecutor 組合 SQL，並執行操作。
 
 * UpdateSqlExecutor  extends WhereBuilderWrapper 
 
