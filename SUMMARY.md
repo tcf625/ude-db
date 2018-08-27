@@ -25,7 +25,7 @@
 
 ## 進階使用
 
-* 程式碼產生器
+* [程式碼產生器](jin-jie-shi-yong/cheng-shi-ma-chan-sheng-qi.md)
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
 * 外部設定檔
 * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
