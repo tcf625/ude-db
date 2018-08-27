@@ -30,7 +30,15 @@ public class JDBCGenerator {
 ```
 
 * 在靜態建構子中，定義啟動參數
-  *  OutputPath : 預設檔案產出路徑。
+  * 設定檔路徑 
+  * OutputPath : 預設檔案產出路徑。
+  * Default_ProjectPath : 預設檔案所屬專案
+  * 其它預設產出的所屬 package 及 class 名稱字尾。    
+* main function
+  * GlobalPattern : 
+     * 符合格式的 TABLE/VIEW 名稱，才會被轉換。
+     * 且有得以匹配的 TableConvertion。 
+  * .run( spring_context_location ) : 開始執行程式碼產生。
 
 
 ### 設定檔
