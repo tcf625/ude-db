@@ -25,3 +25,24 @@ public void test() {
 }
 
 ```
+
+
+#### NativeSQLAnswer 
+
+另一個驗證模式為使用 NativeSQLAnswer 。
+配合 MockUtils 產出的 DBFacade ，可以把每一次 SQL 呼叫記錄下來比對。
+
+``` java
+final DBFacade dbFacade = MockUtils.getMock(DBFacade.class);
+
+@Test
+public void test_updateTable_By_clause() {
+    final NativeSQLAnswer answer = DBMockUtils.mockNativeQuery();
+    final UpdateSqlExecutor executor = UpdateSqlExecutor.withTable("table1");
+    executor.setByClause("Col_1", "Col_0+1");
+    executor.equalsClause("id", "I00001");
+    executor.updateTable(this.dbFacade);
+    answer.assertSQL(0, "update table1 set col_1=col_0+1  where id = ? ", "I00001");
+}
+```
+
