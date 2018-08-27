@@ -10,7 +10,7 @@
 
 ``` java
 public class JDBCGenerator {
-static {
+  static {
     DBGeneratorConfigs.OutputPath.set("../");
     DBGeneratorConfigs.Default_ProjectPath.set("iut-core/");
     DBGeneratorConfigs.Default_DaoPackage.set("com.iisigroup.iut.base.dao.main.impl");
@@ -19,12 +19,12 @@ static {
     DBGeneratorConfigs.Location_DatatypeDefaultValue.set("classpath:config/datatype-default-value.properties");
     DBGeneratorConfigs.DomainClassSuffix.set("PO");
     DBGeneratorConfigs.DaoImplClassSuffix.set("DAOImpl");
-}
-public static void main(final String[] args) throws Exception {
+  }
+  public static void main(final String[] args) throws Exception {
     final GenerateJDBC generateJDBC = new GenerateJDBC();
     generateJDBC.setGlobalPattern("(?i)" + "(CITIES.*)");
     generateJDBC.run("classpath:config/generator-context-jdbc.xml");
-}
+  }
 }    
 
 ```
