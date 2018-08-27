@@ -30,7 +30,7 @@ public class JDBCGenerator {
 ```
 
 * 在靜態建構子中，定義啟動參數
-  *  OutputPath : 預設
+  *  OutputPath : 預設檔案產出路徑。
 
 
 ### 設定檔
