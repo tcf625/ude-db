@@ -32,4 +32,5 @@ config/datatype-mapping.properties
     <bean class="com.iisigroup.ude.tools.codegen.sample.config.ALL_TABLES" />
 ```
 
- *   資料庫連
+ * 資料庫連線設定 DataSource 可以有多個，工具程式會自動跑過每一組 DataSource
+   * 唯一的限
