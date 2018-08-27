@@ -11,7 +11,7 @@
 ``` java
 @Test
 public void test() {
-    final UpdateSqlExecutor executor = new UpdateSqlExecutor();
+    final UpdateSqlExecutor executor = UpdateSqlExecutor.withTable("table2");
     executor.setByClause("Col_1", "Col_0+1");
     executor.equalsClause("id", "I00001");
     
