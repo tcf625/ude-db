@@ -14,17 +14,14 @@ public void test() {
     final UpdateSqlExecutor executor = new UpdateSqlExecutor();
     executor.setByClause("Col_1", "Col_0+1");
     executor.equalsClause("id", "I00001");
-    assertSQL(executor.toParameterizedSQL("table2"), 
-              "update table2 set col_1=col_0+1 where id=?", 1);
+    
+    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL("table2"), 
+              "update table2 set col_1=col_0+1 where id=?", "I00001");
               
-    assertSQL(executor.toParameterizedSQL("table2"), "" 
+    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL("table2"), "" 
             + "update table2        " 
             + "   set col_1=col_0+1 " 
-            + " where id=?          ", 1);
+            + " where id=?          ", "I00001");
 }
 
-private void assertSQL(final ParameterizedSQL parameterizedSQL, final String expectedSQL, final int size) {
-    SQLAssert.assertEquals(expectedSQL, parameterizedSQL.sql);
-    assertEquals(size, parameterizedSQL.queryParams.size());
-}
 ```
