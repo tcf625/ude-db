@@ -15,8 +15,8 @@ setByParam(String, String)
 setNull(ColumnDefine<?>)
 setNull(String)
 
-updateTable(DBFacade, String)
-extraClause(ExtraClauseOP, String) // UnsupportedOperationException 不能再加上 group/order by 
+updateTable(DBFacade, String table) // 執行 SQL UPDATE 操作
+extraClause(ExtraClauseOP, String)  // UnsupportedOperationException 不能再加上 group/order by 
 ```
 
 * DeleteSqlExecutor  extends WhereBuilderWrapper 
