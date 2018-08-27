@@ -27,7 +27,7 @@
 
 * [程式碼產生器](jin-jie-shi-yong/cheng-shi-ma-chan-sheng-qi.md)
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
-* 外部設定檔
+* [外部設定檔](jin-jie-shi-yong/wai-bu-she-ding-dang.md)
 * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
 * 稽核記錄接口
 
