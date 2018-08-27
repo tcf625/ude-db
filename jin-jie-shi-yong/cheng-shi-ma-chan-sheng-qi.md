@@ -86,13 +86,21 @@ public TableConvertion allTable() {
     final TableConvertion convertion = new AliasTableConvertion();
     convertion.setPermitRegexs("(?i)" + "(.*)");
     //convertion.setUnPermitRegexs("(?i)" + "(role.*)");
+    
+    // 此類型所屬的 package
     final String packageName = "com.iisigroup.iut.base.entity.main";
     convertion.setDomainPackage(packageName.toLowerCase());
+    
+    // 以 BaseDAOImplClassGenerator 生成 DAO 檔案 於專案 "iut-core/"
     convertion.addGeneratorFactory(BaseDAOImplClassGenerator.class, "iut-core/");
+    
+    // 以 IUTBasePOCG 生成 PO 檔案 於專案 "iut-core/"    
     convertion.addGeneratorFactory(IUTBasePOCG.class, "iut-core/");
     return convertion;
 }
 ``` 
+
+* 若自行實作 ClassGenerator ，可以有更多客制化定義。
  
 
  
