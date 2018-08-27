@@ -6,6 +6,30 @@
 * 目前沒有把它 GUI 化的計畫，因為通常使用者限定於專案中的少數成員。
 * 應該是工具程式，不是發行的專案內容。
 
+### 啟動類別
+
+``` java
+public class JDBCGenerator {
+static {
+    DBGeneratorConfigs.OutputPath.set("../");
+    DBGeneratorConfigs.Default_ProjectPath.set("iut-core/");
+    DBGeneratorConfigs.Default_DaoPackage.set("com.iisigroup.iut.base.dao.main.impl");
+    DBGeneratorConfigs.Default_DomainPackage.set("com.iisigroup.iut.base.entity.main");
+    DBGeneratorConfigs.Location_DatatypeMapping.set("classpath:config/datatype-mapping.properties");
+    DBGeneratorConfigs.Location_DatatypeDefaultValue.set("classpath:config/datatype-default-value.properties");
+    DBGeneratorConfigs.DomainClassSuffix.set("PO");
+    DBGeneratorConfigs.DaoImplClassSuffix.set("DAOImpl");
+}
+public static void main(final String[] args) throws Exception {
+    final GenerateJDBC generateJDBC = new GenerateJDBC();
+    generateJDBC.setGlobalPattern("(?i)" + "(CITIES.*)");
+    generateJDBC.run("classpath:config/generator-context-jdbc.xml");
+}
+}    
+
+```
+
+
 ### 設定檔
 
 設定檔案建議置於 classpath 下即可，檔名原則上可以需求調整。
@@ -30,7 +54,30 @@ config/datatype-mapping.properties
     </bean>
     <!-- Converters -->
     <bean class="com.iisigroup.ude.tools.codegen.sample.config.ALL_TABLES" />
+    <bean class="com.iisigroup.ude.tools.codegen.sample.config.SPEC_TABLE" />    
 ```
 
  * 資料庫連線設定 DataSource 可以有多個，工具程式會自動跑過每一組 DataSource
-   * 唯一的限
+ 
+ * Converters 設定 : 為 JAVA CONFIG，內定 1~N 個  TableConvertion Bean
+
+ 
+        
+#### TableConvertion 
+
+``` java
+@Bean
+public TableConvertion allTable() {
+    final TableConvertion convertion = new AliasTableConvertion();
+    convertion.setPermitRegexs("(?i)" + "(.*)");
+    //convertion.setUnPermitRegexs("(?i)" + "(role.*)");
+    final String packageName = "com.iisigroup.iut.base.entity.main";
+    convertion.setDomainPackage(packageName.toLowerCase());
+    convertion.addGeneratorFactory(BaseDAOImplClassGenerator.class, "iut-core/");
+    convertion.addGeneratorFactory(IUTBasePOCG.class, "iut-core/");
+    return convertion;
+}
+``` 
+ 
+
+ 
