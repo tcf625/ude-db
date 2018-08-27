@@ -15,10 +15,10 @@ public void test() {
     executor.setByClause("Col_1", "Col_0+1");
     executor.equalsClause("id", "I00001");
     
-    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL("table2"), 
+    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL(), 
               "update table2 set col_1=col_0+1 where id=?", "I00001");
               
-    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL("table2"), "" 
+    ParameterizedSQLAssert.assertSQL(executor.toParameterizedSQL(), "" 
             + "update table2        " 
             + "   set col_1=col_0+1 " 
             + " where id=?          ", "I00001");
