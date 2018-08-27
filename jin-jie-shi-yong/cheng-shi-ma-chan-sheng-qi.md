@@ -29,15 +29,22 @@ public class JDBCGenerator {
 
 ```
 
+* 在靜態建構子中，定義啟動參數
+  *  OutputPath : 預設
+
 
 ### 設定檔
 
-設定檔案建議置於 classpath 下即可，檔名原則上可以需求調整。
+設定檔案建議置於 classpath 下即可，檔名即是啟動類別中指定的檔案名稱。
 
-```
-config/applicationContext-test-sample.xml 
-config/datatype-default-value.properties
-config/datatype-mapping.properties
+``` java
+// config/datatype-default-value.properties
+// config/datatype-mapping.properties
+DBGeneratorConfigs.Location_DatatypeMapping.set("classpath:config/datatype-mapping.properties");
+DBGeneratorConfigs.Location_DatatypeDefaultValue.set("classpath:config/datatype-mapping.properties");
+
+// config/applicationContext-test-sample.xml 
+generateJDBC.run("classpath:config/generator-context-jdbc.xml");
 ```
 
 #### Spring : applicationContext-test-sample.xml
