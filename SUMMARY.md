@@ -29,5 +29,5 @@
 * [交易設定](jin-jie-shi-yong/jiao-yi.md)
 * [外部設定檔](jin-jie-shi-yong/wai-bu-she-ding-dang.md)
 * [多重資料來源](jin-jie-shi-yong/duo-zhong-zi-liao-lai-yuan.md)
-* 稽核記錄接口
+* [稽核記錄接口](jin-jie-shi-yong/ji-he-ji-lu-jie-kou.md)
 
