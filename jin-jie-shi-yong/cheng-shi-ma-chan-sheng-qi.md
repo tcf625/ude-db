@@ -102,5 +102,8 @@ public TableConvertion allTable() {
 
 * 若自行實作 ClassGenerator ，可以有更多客制化定義。
  
+ 
+ 
+TODO : 待補充說明。
 
  
